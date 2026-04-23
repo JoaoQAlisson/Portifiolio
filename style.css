@@ -1,0 +1,548 @@
+:root {
+    --bg: #000000;
+    --text-main: #ffffff;
+    --text-dim: #888888;
+    --accent: #007AFF;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Navbar */
+.nav-minimal {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-minimal .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-weight: 900; font-size: 1.5rem; text-decoration: none; color: #fff; }
+.nav-links a { text-decoration: none; color: var(--text-dim); margin-left: 30px; transition: 0.3s; }
+.nav-links a:hover { color: #fff; }
+
+/* Hero */
+.hero-premium { padding: 120px 0; }
+.label { color: var(--accent); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+.hero-premium h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 900; line-height: 1.1; margin: 20px 0; }
+.hero-premium h1 span { color: var(--text-dim); }
+.hero-premium p { font-size: 1.5rem; color: var(--text-dim); max-width: 600px; }
+
+/* Lista de Projetos Estilo Dalvi */
+.section-label { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 40px; }
+
+.work-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.work-item:hover { padding-left: 20px; background: rgba(255,255,255,0.02); }
+.work-item h3 { font-size: 2rem; margin: 10px 0 0; }
+.work-category { color: var(--accent); font-size: 0.8rem; font-weight: bold; }
+.work-arrow { font-size: 2rem; color: var(--border); transition: 0.3s; }
+.work-item:hover .work-arrow { color: #fff; transform: translateX(10px); }
+
+/* Seção de Contato */
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.section-title-center {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.contact-text {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: var(--text-dim);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.contact-text a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.contact-text a:hover {
+    border-bottom: 1px solid var(--accent);
+}
+
+/* Grade de Botões */
+.contact-btns-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid var(--accent); /* Usando o azul como cor de destaque */
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: all 0.4s ease;
+    min-width: 180px;
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 122, 255, 0.2);
+}
+
+/* Responsividade para mobile */
+@media (max-width: 600px) {
+    .btn-outline {
+        width: 100%;
+    }
+}
+
+/* Seção Sobre */
+.about-section {
+    padding: 120px 0;
+    background-color: #050505; /* Um tom levemente diferente do preto absoluto para profundidade */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Divide em duas colunas desiguais */
+    gap: 60px;
+    align-items: start;
+}
+
+.about-title h2 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-top: 20px;
+    font-weight: 900;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.about-text strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Badges Acadêmicos */
+.academic-badges {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.badge {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr; /* Vira uma coluna só no celular */
+        gap: 40px;
+    }
+    
+    .about-title h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* --- Atualização da Seção Sobre --- */
+
+.about-section {
+    padding: 120px 0;
+    background-color: #050505; /* Fundo ligeiramente diferente para profundidade */
+}
+
+/* Garante que o grid se comporte bem com a imagem */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Coluna da foto e coluna do texto */
+    gap: 80px; /* Aumentei o espaço para respirar */
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+}
+
+/* Estilização do Contêiner e da Imagem */
+.about-image-container {
+    width: 100%;
+    /* Define uma proporção quadrada opcional. Se quiser formato original, remova as próximas 2 linhas */
+    aspect-ratio: 1 / 1; 
+    overflow: hidden; 
+    border-radius: 12px; /* Bordas levemente arredondadas, estilo moderno */
+    border: 2px solid var(--border); /* Linha sutil ao redor da foto */
+    transition: 0.4s ease; /* Transição para o efeito de hover */
+}
+
+/* Efeito sutil ao passar o mouse na foto */
+.about-image-container:hover {
+    transform: scale(1.02);
+    border-color: rgba(255,255,255, 0.3);
+    box-shadow: 0 10px 30px rgba(255,255,255, 0.05);
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    display: block; /* Remove espaços vazios na base da imagem */
+    /* Filtro opcional para deixar P&B e combinando com o tema (remova se preferir colorida) */
+    /* filter: grayscale(100%); */
+    /* transition: filter 0.4s ease; */
+}
+
+/* Ativa a cor na imagem ao passar o mouse (se o filtro P&B estiver ativado) */
+/* .about-image-container:hover .about-image {
+    filter: grayscale(0%);
+} */
+
+/* --- Estilos Existentes (Mantidos) --- */
+.label {
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.about-text p {
+    font-size: 1.15rem; /* Leve ajuste de tamanho */
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.about-text strong {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.academic-badges {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.badge {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 900px) {
+    .about-section {
+        padding: 80px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr; /* Vira uma coluna no celular */
+        gap: 40px;
+        text-align: center; /* Centraliza o texto no celular */
+    }
+
+    .about-image-container {
+        max-width: 300px; /* Limita o tamanho da foto no celular */
+        margin: 0 auto; /* Centraliza a foto horizontalmente */
+    }
+
+    .academic-badges {
+        justify-content: center; /* Centraliza as badges no celular */
+    }
+}
+
+.interests-text {
+    margin-top: 30px;
+    opacity: 0.5; /* Deixa o texto bem discreto */
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+footer {
+    padding: 60px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-personal {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-top: 10px;
+    letter-spacing: 1px;
+    text-transform: lowercase; /* Fica muito moderno em portfólios de design */
+}
+/* Seção Habilidades */
+.skills-section {
+    padding: 100px 0;
+    background-color: var(--bg);
+}
+
+.section-label-top {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 60px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skills-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas */
+    gap: 60px 40px;
+}
+
+.skill-category {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Ícone em formato de Losango (Diamond) */
+.skill-icon-box {
+    min-width: 80px;
+    height: 80px;
+    border: 1px solid var(--border);
+    transform: rotate(45deg); /* Cria o efeito de diamante */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.skill-icon-box i {
+    transform: rotate(-45deg); /* Desfaz a rotação para o ícone ficar reto */
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.skill-category:hover .skill-icon-box {
+    border-color: var(--accent);
+    background: rgba(0, 122, 255, 0.05);
+}
+
+/* Lista de Habilidades */
+.skill-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.skill-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-content li {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.skill-content li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Responsividade Celular */
+@media (max-width: 800px) {
+    .skills-main-grid {
+        grid-template-columns: 1fr; /* Uma coluna no celular */
+    }
+}
+
+/* Seção de Projetos */
+.projects-section {
+    padding: 100px 0;
+    background-color: var(--bg);
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.projects-header h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    margin: 15px 0;
+}
+
+.projects-header p {
+    color: var(--text-dim);
+    font-size: 1.2rem;
+}
+
+.github-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.separator {
+    width: 60px;
+    border: 1px solid var(--border);
+    margin: 40px auto;
+}
+
+/* Vitrine de Projetos */
+.projects-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.project-item {
+    background: #0a0a0a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+/* Efeito de Overlay */
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-item:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.view-project {
+    padding: 12px 25px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Detalhes abaixo da imagem */
+.project-details {
+    padding: 25px;
+}
+
+.project-details h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+}
+
+/* --- Estilização do Logo na Navbar --- */
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.nav-logo {
+    height: 60px; /* Ajuste a altura conforme preferir */
+    width: auto;
+    display: block;
+    
+    /* --- O TRUQUE MÁGICO --- */
+    /* 'screen' mantém os tons claros e esconde os escuros.
+       Como seu logo é preto em fundo branco, primeiro invertemos 
+       as cores (fica branco em fundo preto) e depois usamos o blend mode 
+       para garantir que qualquer imperfeição do fundo suma. */
+    
+    filter: invert(1); /* Transforma o logo preto em branco */
+    mix-blend-mode: screen; /* Garante que o fundo branco original fique transparente no site dark */
+    
+    transition: all 0.4s ease; /* Transição suave para o hover */
+}
+
+/* Efeito ao passar o mouse */
+.nav-logo:hover {
+    transform: scale(1.05); /* Leve aumento */
+    filter: invert(1) drop-shadow(0 0 10px var(--accent)); /* Adiciona um brilho azul (sua cor accent) */
+}

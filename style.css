@@ -546,3 +546,32 @@ footer {
     transform: scale(1.05); /* Leve aumento */
     filter: invert(1) drop-shadow(0 0 10px var(--accent)); /* Adiciona um brilho azul (sua cor accent) */
 }
+
+/* Base da Tag de Status */
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    backdrop-filter: blur(5px); /* Efeito de vidro */
+}
+
+/* Estilo para Concluído (Verde sutil ou Azul) */
+.status-badge.concluded {
+    background-color: rgba(46, 204, 113, 0.2); /* Verde transparente */
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.5);
+}
+
+/* Estilo para Em Progresso (Laranja ou Amarelo) */
+.status-badge.in-progress {
+    background-color: rgba(241, 196, 15, 0.1); /* Amarelo transparente */
+    color: #f1c40f;
+    border: 1px solid rgba(241, 196, 15, 0.5);
+}
